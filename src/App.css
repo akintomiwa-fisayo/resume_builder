@@ -1,0 +1,186 @@
+@import url("https://use.fontawesome.com/releases/v5.7.0/css/all.css");
+#App {
+  -webkit-print-color-adjust: exact;
+  margin: 0;
+}
+#App header {
+  padding: 2em 5vw;
+  background: #282c34;
+  color: white;
+}
+#App header #author {
+  margin: 0;
+  text-transform: capitalize;
+}
+#App header #profession {
+  text-transform: uppercase;
+  font-weight: normal;
+}
+#App header #bullets {
+  display: grid;
+  width: 100%;
+  grid-template-rows: auto auto;
+  grid-template-columns: auto auto;
+  grid-auto-flow: column;
+}
+#App header #bullets .bullet {
+  margin: 0.5em 0;
+}
+#App header #bullets .bullet > :nth-child(1) {
+  font-weight: 600;
+}
+#App header #bullets .bullet > :nth-child(1)::after {
+  content: " ";
+  margin: 0 0.2em;
+}
+#App #main {
+  color: #282c34;
+}
+#App #main a {
+  color: #000000;
+}
+#App #main #aboutAuthor {
+  margin: 2em 0;
+  font-size: 1.2em;
+  padding: 0 5vw;
+}
+#App #main .detail-group {
+  padding: 0 5vw;
+  width: 100%;
+  font-size: 1.1em;
+  text-align: left;
+  margin-bottom: 4em;
+}
+#App #main .detail-group .detail,
+#App #main .detail-group .detail-header {
+  display: flex;
+  width: 100%;
+}
+#App #main .detail-group .detail > :nth-child(1),
+#App #main .detail-group .detail-header > :nth-child(1) {
+  width: 5vw;
+  text-align: center;
+}
+#App #main .detail-group .detail > :nth-child(2),
+#App #main .detail-group .detail-header > :nth-child(2) {
+  padding-left: 3.5vw;
+  width: 100%;
+}
+#App #main .detail-group .detail-header {
+  font-size: 2em;
+  font-weight: 600;
+  margin-bottom: 0.6em;
+}
+#App #main .detail-group .detail-header .icon {
+  font-size: 3vw;
+}
+#App #main .detail-group .detail .icon {
+  display: inline-flex;
+  min-width: 0.8em;
+  max-width: 0.8em;
+  min-height: 0.8em;
+  max-height: 0.8em;
+  width: 0.8em;
+  height: 0.8em;
+  background: #282c34;
+  border-radius: 99999px;
+  border: solid 2px #282c34;
+}
+#App #main .detail-group .detail .icon.no-fill {
+  background: transparent;
+}
+#App #main .detail-group .skill {
+  margin-bottom: 1em;
+}
+#App #main .detail-group .skill > :nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+}
+#App #main .detail-group .skill > :nth-child(2) .title {
+  font-weight: 600;
+}
+#App #main .detail-group .skill > :nth-child(2) .rate {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+#App #main .detail-group .skill > :nth-child(2) .rate .rate-icons {
+  display: grid;
+  grid-gap: 0.8em;
+  grid-auto-flow: column;
+}
+#App #main .detail-group .skill > :nth-child(2) .rate .rate-text {
+  margin-top: 0.1em;
+  text-transform: capitalize;
+  text-align: right;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+#App #main .detail-group .work {
+  margin-bottom: 1.4em;
+}
+#App #main .detail-group .work > :nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+}
+#App #main .detail-group .work > :nth-child(2) .date {
+  font-weight: 700;
+  white-space: nowrap;
+}
+#App #main .detail-group .work > :nth-child(2) .infos {
+  display: block;
+  width: 100%;
+  padding-left: 2em;
+}
+#App #main .detail-group .work > :nth-child(2) .infos .position {
+  font-size: 1.15em;
+  font-weight: bold;
+}
+#App #main .detail-group .work > :nth-child(2) .infos .company {
+  display: block;
+  opacity: 0.9;
+  margin: 0.3em 0;
+  text-transform: capitalize;
+}
+#App #main .detail-group .education {
+  margin-bottom: 1.4em;
+}
+#App #main .detail-group .education > :nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+}
+#App #main .detail-group .education > :nth-child(2) .date {
+  font-weight: 700;
+  white-space: nowrap;
+}
+#App #main .detail-group .education > :nth-child(2) .infos {
+  display: block;
+  width: 100%;
+  padding-left: 2em;
+}
+#App #main .detail-group .education > :nth-child(2) .infos .type {
+  font-size: 1.15em;
+  font-weight: bold;
+}
+#App #main .detail-group .education > :nth-child(2) .infos .institute {
+  display: block;
+  opacity: 0.9;
+  margin: 0.3em 0;
+  text-transform: capitalize;
+}
+#App #main .detail-group .certificate {
+  margin-bottom: 1.4em;
+}
+#App #main .detail-group .certificate > :nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+}
+#App #main .detail-group .certificate > :nth-child(2) .date {
+  font-weight: 700;
+  white-space: nowrap;
+}
+#App #main .detail-group .certificate > :nth-child(2) .infos {
+  display: block;
+  width: 100%;
+  padding-left: 2em;
+}

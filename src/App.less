@@ -1,0 +1,243 @@
+// out: ./App.css
+
+@import url("https://use.fontawesome.com/releases/v5.7.0/css/all.css");
+@pagePadding: 5vw;
+@color: #282c34;
+@icon-size: .8em;
+
+
+#App {
+  -webkit-print-color-adjust: exact;
+  margin: 0;
+
+  header {
+    padding: 2em @pagePadding;
+    background: @color;
+    color: white;
+
+    #author {
+      margin: 0;
+      text-transform: capitalize;
+    }
+
+    #profession {
+      text-transform: uppercase;
+      font-weight: normal;
+    }
+
+    #bullets {
+      display: grid;
+      width: 100%;
+      grid-template-rows: auto auto;
+      grid-template-columns: auto auto;
+      grid-auto-flow: column;
+
+      .bullet {
+        margin: .5em 0;
+
+        >:nth-child(1) {
+          font-weight: 600;
+
+          &::after {
+            content: " ";
+            margin: 0 .2em;
+          }
+        }
+      }
+    }
+  }
+
+  #main {
+    color: @color;
+
+    a {
+      color: darken(@color, 30%);
+
+    }
+
+    #aboutAuthor {
+      margin: 2em 0;
+      font-size: 1.2em;
+      padding: 0 @pagePadding;
+    }
+
+    .detail-group {
+      padding: 0 @pagePadding;
+      width: 100%;
+      font-size: 1.1em;
+      text-align: left;
+      margin-bottom: 4em;
+
+
+      .detail,
+      .detail-header {
+        display: flex;
+        width: 100%;
+
+        >:nth-child(1) {
+          width: 5vw;
+          text-align: center;
+        }
+
+        >:nth-child(2) {
+          padding-left: 3.5vw;
+          width: 100%;
+        }
+      }
+
+      .detail-header {
+        font-size: 2em;
+        font-weight: 600;
+        margin-bottom: .6em;
+
+        .icon {
+          font-size: 3vw;
+        }
+      }
+
+      .detail {
+        // padding: 0 @pagePadding;
+
+        .icon {
+          display: inline-flex;
+          min-width: @icon-size;
+          max-width: @icon-size;
+          width: @icon-size;
+          min-height: @icon-size;
+          max-height: @icon-size;
+          width: @icon-size;
+          height: @icon-size;
+          background: @color;
+          border-radius: 99999px;
+          border: solid 2px @color;
+
+          &.no-fill {
+            background: transparent;
+
+          }
+        }
+
+      }
+
+      .skill {
+        margin-bottom: 1em;
+
+        >:nth-child(2) {
+          display: flex;
+          justify-content: space-between;
+
+          .title {
+            // background-color: green ;
+            font-weight: 600;
+          }
+
+          .rate {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            .rate-icons {
+              display: grid;
+              grid-gap: .8em;
+              grid-auto-flow: column;
+            }
+
+            .rate-text {
+              margin-top: .1em;
+              text-transform: capitalize;
+              text-align: right;
+              font-size: 1.2em;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+
+      .work {
+        margin-bottom: 1.4em;
+
+        >:nth-child(2) {
+          display: flex;
+          justify-content: space-between;
+
+          .date {
+            font-weight: 700;
+            white-space: nowrap;
+          }
+
+          .infos {
+            display: block;
+            width: 100%;
+            padding-left: 2em;
+
+            .position {
+              font-size: 1.15em;
+              font-weight: bold;
+            }
+
+            .company {
+              display: block;
+              opacity: .9;
+              margin: .3em 0;
+              text-transform: capitalize;
+            }
+
+          }
+        }
+      }
+
+      .education {
+        margin-bottom: 1.4em;
+
+        >:nth-child(2) {
+          display: flex;
+          justify-content: space-between;
+
+          .date {
+            font-weight: 700;
+            white-space: nowrap;
+          }
+
+          .infos {
+            display: block;
+            width: 100%;
+            padding-left: 2em;
+
+            .type {
+              font-size: 1.15em;
+              font-weight: bold;
+            }
+
+            .institute {
+              display: block;
+              opacity: .9;
+              margin: .3em 0;
+              text-transform: capitalize;
+            }
+
+          }
+        }
+      }
+
+      .certificate {
+        margin-bottom: 1.4em;
+
+        >:nth-child(2) {
+          display: flex;
+          justify-content: space-between;
+
+          .date {
+            font-weight: 700;
+            white-space: nowrap;
+          }
+
+          .infos {
+            display: block;
+            width: 100%;
+            padding-left: 2em;
+          }
+        }
+      }
+    }
+  }
+}
