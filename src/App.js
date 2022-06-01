@@ -61,7 +61,7 @@ class App extends React.Component {
           rate: 4,
         },
       ],
-      softSkills:[
+      softSkills: [
         "Good communication skills.",
         "Ability to learn and adapt quickly.",
         "Ability to work with distributed teams.",
@@ -72,62 +72,62 @@ class App extends React.Component {
           from: 'Jun 2020',
           to: 'present',
           company: [{
-            name: 'Abule Inc',
-            description: 'Built a web app with many moving part, some of the specifications and requirements were unique so i had to design and code lots of components from scratch including but not limited to building a custom video conference feature (using AWS Chime), a custom calendar component and a custom week-day with time collect just to name a few   ',
+            name: 'Grais',
+            description: 'Collaborated with other developers to build web applications with a lot of moving parts for different clients with my tasks ranging from implementing third-party tools to building new components from scratch.',
             city: '',
             state: '',
           }],
-          techStack: "Node.js, Sequelize, Elasticsearch, PostgreSQl, AWS S3, AWS Chime, Transloadit, Next.js, LESS",
-          tools:"Github, Heroku"
+          projects: <>
+            <i className="company">Let's Get Set  <a href={"https://app.letsgetset.co"}>({"https://app.letsgetset.co"})</a></i>
+            <span>A platform that helps users with Tax Refund.</span>
+            <i className="company">Timechek  <a href={"https://timecheck.momshierarchyofneeds.com"}>({"https://timecheck.momshierarchyofneeds.com"})</a></i>
+            <span>A platform that help mothers keep track of how they spend their time and how to improve in different aspects  of their lives.</span>
+            <br></br>
+            <br></br>
+            <i className="company"><b>* Also worked on other projects but I am bound by NDA not to disclose them yet.</b></i>
+          </>,
+          techStack: "Node.js, Sequelize, Elasticsearch, PostgreSQl, AWS Amplify, AWS S3, AWS Chime, Transloadit, Next.js, LESS, SCSS",
+          tools: "Github, Heroku,  AWS",
+
         },
         {
           position: 'fullstack developer (Independent)',
-          description: 'Built websites for bussinesses and people according to their requirements and helped companies complete a couple of projects whenever they needed an extra hand',
-          from: 'oct 2017',
-          to: 'Jun 2020',
+          description: 'Built websites for bussinesses and people according to their requirements and helped companies complete a couple of projects whenever they needed an extra hand.',
+          from: 'July 2017',
+          to: 'Oct 2019',
           company: [
             {
               name: 'Director Tolulope Ajayi',
               link: "https://tolulopeajayi.com",
-              description: 'Built a professional portfolio to showcase works (past and present) and news about director Tolulope Ajayi (https://tolulopeajayi.com)',
+              description: 'Built a professional portfolio to showcase works (past and present) and news about director Tolulope Ajayi (https://tolulopeajayi.com).',
               city: '',
               state: '',
             },
             {
               name: 'Deborah Williams',
               link: "https://adebworldwide.com",
-              description: 'Built a simple portfolio (https://adebworldwide.com)',
+              description: 'Built a simple portfolio (https://adebworldwide.com).',
               city: '',
               state: '',
             },
             {
               name: 'Koddfarms Products LTD',
               link: "https://koddfarms.com",
-              description: 'Built the farm\'s official website to showcase it\'s products and agricultural believes (https://koddfarms.com)',
+              description: 'Built the farm\'s official website to showcase it\'s products and agricultural believes (https://koddfarms.com).',
               city: '',
               state: '',
             },
             {
               name: 'DevCTrainingWithAndela Capstone Project',
-              description: 'Built a web application for a company that allows its employees to share gif and video posts, comment on posts, report posts and comments and also allows admin users to create a new employee and attend to reports submitted by employees (https://akintomiwa-fisayo.github.io/)',
+              description: 'Built a web application for a company that allows its employees to share gif and video posts, comment on posts, report posts and comments and also allows admin users to create a new employee and attend to reports submitted by employees (https://akintomiwa-fisayo.github.io/).',
               link: "https://akintomiwa-fisayo.github.io",
               city: '',
               state: '',
             },
           ],
           techStack: "Node.js, Sequelize, MySQL, MariaDB, PostgreSQL, MongoDB, React, Next.js, SCSS, LESS, HTML5, Javascript, Jquery",
-          tools:"Github, Heroku"
+          tools: "Github, Heroku"
         },
-      ],
-      educations: [
-       /*  {
-          from: 'jun 2010',
-          to: 'sep 2014',
-          type: 'High School Diploma',
-          institute: 'tomia community secondary school',
-          city: 'kola',
-          state: 'lagos',
-        }, */
       ],
       certificates: [
         {
@@ -217,7 +217,7 @@ class App extends React.Component {
 
   render() {
     const { state } = this;
-    const { skills ,works,educations,certificates,softSkills} = state;
+    const { skills, works, certificates, softSkills } = state;
 
     const skillsJSX = [];
     skills.forEach((skill) => {
@@ -288,39 +288,24 @@ class App extends React.Component {
             <div className="infos">
               <div className="position">{ucFirst(work.position)}</div>
               <div>
-                {company.map((comp)=>{
+                {company.map((comp) => {
                   return <div>
-                    <i className="company">{ucFirst(comp.name)} {comp.link ?  <a href={comp.link}>({comp.link})</a>: ""}</i>
+                    <i className="company">{ucFirst(comp.name)} {comp.link ? <a href={comp.link}>({comp.link})</a> : ""}</i>
                     <span>{comp.description}</span>
-                    </div>
+                  </div>
 
                 })}
               </div>
               {/* <span>{ucFirst(work.description)}</span> */}
+              {work.projects && <>
+                <p><b>Projects:</b></p>
+                <div className='projects'>
+                  {work.projects}
+                </div>
+              </>
+              }
               <p><b>Tech stack:</b> {work.techStack}</p>
               <p><b>Tools:</b> {work.tools}</p>
-            </div>
-          </div>
-        </div>
-        ,
-      );
-    });
-
-    const educationsJSX = [];
-    educations.forEach((education) => {
-      educationsJSX.push(
-        <div className="education detail">
-          <div>
-            <span className="icon" />
-          </div>
-          <div>
-            <div className="date">
-              <div>{`${ucFirst(education.from)}-`}</div>
-              <div>{ucFirst(education.to)}</div>
-            </div>
-            <div className="infos">
-              <div className="type">{ucFirst(education.type)}</div>
-              <i className="institute">{`${education.institute}, ${education.city}, ${education.state}`}</i>
             </div>
           </div>
         </div>
@@ -356,15 +341,15 @@ class App extends React.Component {
           <div id="bullets">
             <p className="bullet">
               <span>E-mail</span>
-              <span><a href={"mailto:"+state.email} style={{color: "white"}}>{ucFirst(state.email)}</a></span>
+              <span><a href={"mailto:" + state.email} style={{ color: "white" }}>{ucFirst(state.email)}</a></span>
             </p>
             <p className="bullet">
               <span>Phone No</span>
-              <span><a href={"tel:"+state.phoneNumber} style={{color: "white"}}>{ucFirst(state.phoneNumber)}</a></span>
+              <span><a href={"tel:" + state.phoneNumber} style={{ color: "white" }}>{ucFirst(state.phoneNumber)}</a></span>
             </p>
             <p className="bullet">
               <span>LinkedIn</span>
-              <span><a href={state.linkedIn} style={{color: "white"}}>{ucFirst(state.name)}</a></span>
+              <span><a href={state.linkedIn} style={{ color: "white" }}>{ucFirst(state.name)}</a></span>
             </p>
           </div>
         </header>
@@ -378,7 +363,9 @@ class App extends React.Component {
               </span>
               <span>Skills</span>
             </div>
-            {skillsJSX}
+            <div className='details'>
+              {skillsJSX}
+            </div>
           </div>
 
           <div className="detail-group">
@@ -400,16 +387,6 @@ class App extends React.Component {
             </div>
             {worksJSX}
           </div>
-
-         {/*  <div className="detail-group">
-            <div className="detail-header">
-              <span>
-                <span className="icon fas fa-graduation-cap" />
-              </span>
-              <span>Education</span>
-            </div>
-            {educationsJSX}
-          </div> */}
 
           <div className="detail-group">
             <div className="detail-header">

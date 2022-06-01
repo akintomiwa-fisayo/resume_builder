@@ -74,6 +74,10 @@
 #App #main .detail-group .detail-header .icon {
   font-size: 3vw;
 }
+#App #main .detail-group .details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 #App #main .detail-group .detail .icon {
   display: inline-flex;
   min-width: 0.8em;
@@ -140,7 +144,9 @@
   display: block;
   opacity: 0.9;
   margin: 0.3em 0;
-  text-transform: capitalize;
+}
+#App #main .detail-group .work > :nth-child(2) .infos .projects {
+  margin-top: -0.5em;
 }
 #App #main .detail-group .education {
   margin-bottom: 1.4em;
