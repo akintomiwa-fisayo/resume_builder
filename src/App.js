@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import './pTech.css';
-import { isEmpty, ucFirst } from './lib';
+import { ucFirst } from './lib';
 
 class App extends React.Component {
   constructor(props) {
@@ -402,7 +402,7 @@ class App extends React.Component {
             <div className="detail-group">
               <div className="detail-header">
                 <span>
-                  <span className="icon fas fa-book-reader" />
+                  <span className="icon fas fa-comment-dots" />
                 </span>
                 <span>Languages</span>
               </div>
