@@ -13,41 +13,9 @@ class App extends React.Component {
       linkedIn: 'https://linkedin.com/in/akintomiwa-fisayo606620193/',
       email: 'akintomiwa.fisayo@gmail.com',
       phoneNumber: "+2349067677842",
-      about: `Solution-driven software engineer with 5 years experience excelling in highly collaborative work environment, finding solutions to
+      about: `Solution-driven software engineer with 6 years experience excelling in highly collaborative work environment, finding solutions to
       challenges while being focused on reponsiveness, security and client's satisfaction.`,
       skills: [
-        {
-          title: 'Node.js with express',
-          rate: 5,
-        },
-        {
-          title: 'ORM (Sequelize)',
-          rate: 5,
-        },
-        {
-          title: 'Database (MySQL, MariaDB, PostgreSQL, MongoDB)',
-          rate: 5,
-        },
-        {
-          title: 'Elasticsearch',
-          rate: 5,
-        },
-        {
-          title: 'AWS',
-          rate: 5,
-        },
-        {
-          title: 'react',
-          rate: 5,
-        },
-        {
-          title: 'Next.js',
-          rate: 5,
-        },
-        {
-          title: 'javascript',
-          rate: 5,
-        },
         {
           title: 'HTML5',
           rate: 5,
@@ -57,8 +25,44 @@ class App extends React.Component {
           rate: 5,
         },
         {
-          title: 'jquery',
+          title: 'JavaScript',
+          rate: 5,
+        },
+        {
+          title: 'TypeScript',
+          rate: 5,
+        },
+        {
+          title: 'React',
+          rate: 5,
+        },
+        {
+          title: 'Next.js',
+          rate: 5,
+        },
+        {
+          title: 'jQuery',
           rate: 4,
+        },
+        {
+          title: 'Node.js with express',
+          rate: 5,
+        },
+        {
+          title: 'Sequelize',
+          rate: 5,
+        },
+        {
+          title: 'Database (PostgreSQL, MySQL, MariaDB, MongoDB)',
+          rate: 5,
+        },
+        {
+          title: 'Elasticsearch, Opensearch',
+          rate: 5,
+        },
+        {
+          title: 'AWS',
+          rate: 5,
         },
       ],
       softSkills: [
@@ -72,7 +76,7 @@ class App extends React.Component {
           from: 'Jun 2020',
           to: 'present',
           company: [{
-            name: 'Grais',
+            name: 'Abule',
             description: 'Collaborated with other developers to build web applications with a lot of moving parts for different clients with my tasks ranging from implementing third-party tools to building new components from scratch.',
             city: '',
             state: '',
@@ -211,13 +215,16 @@ class App extends React.Component {
           author: 'opencalssrooms',
         },
       ],
-
+      languages: [
+        "English",
+        "Yoruba"
+      ]
     };
   }
 
   render() {
     const { state } = this;
-    const { skills, works, certificates, softSkills } = state;
+    const { skills, works, certificates, softSkills, languages } = state;
 
     const skillsJSX = [];
     skills.forEach((skill) => {
@@ -261,6 +268,20 @@ class App extends React.Component {
     const softSkillsJSX = [];
     softSkills.forEach((skill) => {
       softSkillsJSX.push(
+        <div className="skill detail">
+          <div>
+            <span className="icon" />
+          </div>
+          <div>
+            <span className="title">{ucFirst(skill)}</span>
+          </div>
+        </div>,
+      );
+    });
+
+    const languagesJSX = [];
+    languages.forEach((skill) => {
+      languagesJSX.push(
         <div className="skill detail">
           <div>
             <span className="icon" />
@@ -368,14 +389,25 @@ class App extends React.Component {
             </div>
           </div>
 
-          <div className="detail-group">
-            <div className="detail-header">
-              <span>
-                <span className="icon fas fa-book-reader" />
-              </span>
-              <span>Soft Skills</span>
+          <div className="double-detail-group">
+            <div className="detail-group">
+              <div className="detail-header">
+                <span>
+                  <span className="icon fas fa-book-reader" />
+                </span>
+                <span>Soft Skills</span>
+              </div>
+              {softSkillsJSX}
             </div>
-            {softSkillsJSX}
+            <div className="detail-group">
+              <div className="detail-header">
+                <span>
+                  <span className="icon fas fa-book-reader" />
+                </span>
+                <span>Languages</span>
+              </div>
+              {languagesJSX}
+            </div>
           </div>
 
           <div className="detail-group">

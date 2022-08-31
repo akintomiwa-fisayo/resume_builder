@@ -61,6 +61,20 @@
       padding: 0 @pagePadding;
     }
 
+    .double-detail-group {
+      display: grid;
+      // grid-gap: 10px;
+      grid-auto-flow: column;
+
+      >:nth-child(1) {
+        padding-right: 0vw;
+      }
+
+      >:nth-child(2) {
+        padding-left: 0vw;
+      }
+    }
+
     .detail-group {
       padding: 0 @pagePadding;
       width: 100%;
