@@ -66,18 +66,13 @@
   display: flex;
   width: 100%;
 }
-#App #main .detail-group .detail > :nth-child(1),
-#App #main .detail-group .detail-header > :nth-child(1) {
-  width: 5vw;
-  text-align: center;
-}
 #App #main .detail-group .detail > :nth-child(2),
 #App #main .detail-group .detail-header > :nth-child(2) {
   padding-left: 1.3rem;
   width: 100%;
 }
 #App #main .detail-group .detail-header {
-  font-size: 2em;
+  font-size: 1.7em;
   font-weight: 600;
   margin-bottom: 0.6em;
 }
@@ -90,12 +85,12 @@
 }
 #App #main .detail-group .detail .icon {
   display: inline-flex;
-  min-width: 0.8em;
-  max-width: 0.8em;
-  min-height: 0.8em;
-  max-height: 0.8em;
-  width: 0.8em;
-  height: 0.8em;
+  min-width: 8px;
+  max-width: 8px;
+  min-height: 8px;
+  max-height: 8px;
+  width: 8px;
+  height: 8px;
   background: #282c34;
   border-radius: 99999px;
   border: solid 2px #282c34;
