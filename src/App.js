@@ -14,8 +14,28 @@ class App extends React.Component {
       email: 'akintomiwa.fisayo@gmail.com',
       phoneNumber: "+2349067677842",
       about: `Solution-driven software engineer with 6 years experience excelling in highly collaborative work environment, finding solutions to
-      challenges while being focused on reponsiveness, security and client's satisfaction.`,
+      challenges while being focused on scalability, security, reponsiveness and client's satisfaction.`,
       skills: [
+        {
+          title: 'Go',
+          rate: 5,
+        },
+        {
+          title: 'Node.js with express',
+          rate: 5,
+        },
+        {
+          title: 'TypeScript',
+          rate: 5,
+        },
+        {
+          title: 'Database (PostgreSQL, MySQL, MariaDB, MongoDB)',
+          rate: 5,
+        },
+        {
+          title: 'Sequelize',
+          rate: 5,
+        },
         {
           title: 'HTML5',
           rate: 5,
@@ -29,31 +49,7 @@ class App extends React.Component {
           rate: 5,
         },
         {
-          title: 'TypeScript',
-          rate: 5,
-        },
-        {
-          title: 'React',
-          rate: 5,
-        },
-        {
           title: 'Next.js',
-          rate: 5,
-        },
-        {
-          title: 'jQuery',
-          rate: 4,
-        },
-        {
-          title: 'Node.js with express',
-          rate: 5,
-        },
-        {
-          title: 'Sequelize',
-          rate: 5,
-        },
-        {
-          title: 'Database (PostgreSQL, MySQL, MariaDB, MongoDB)',
           rate: 5,
         },
         {
@@ -77,7 +73,7 @@ class App extends React.Component {
           to: 'present',
           company: [{
             name: 'Abule',
-            description: 'Collaborated with other developers to build web applications with a lot of moving parts for different clients with my tasks ranging from implementing third-party tools to building new components from scratch.',
+            description: 'I help set up App environments, introduced and set up company\'s monorepo,  design database structure, code on both frontend and backend and help the team through code review and code debugging.',
             city: '',
             state: '',
           }],
@@ -86,9 +82,6 @@ class App extends React.Component {
             <span>A platform that helps users with Tax Refund.</span>
             <i className="company">Timechek  <a href={"https://timecheck.momshierarchyofneeds.com"}>({"https://timecheck.momshierarchyofneeds.com"})</a></i>
             <span>A platform that help mothers keep track of how they spend their time and how to improve in different aspects  of their lives.</span>
-            <br></br>
-            <br></br>
-            <i className="company"><b>* Also worked on other projects but I am bound by NDA not to disclose them yet.</b></i>
           </>,
           techStack: "Node.js, Sequelize, Elasticsearch, PostgreSQl, AWS Amplify, AWS S3, AWS Chime, Transloadit, Next.js, LESS, SCSS",
           tools: "Github, Heroku,  AWS",
@@ -379,9 +372,6 @@ class App extends React.Component {
 
           <div className="detail-group">
             <div className="detail-header">
-              <span>
-                <span className="icon fas fa-brain" />
-              </span>
               <span>Skills</span>
             </div>
             <div className='details'>
@@ -392,18 +382,12 @@ class App extends React.Component {
           <div className="double-detail-group">
             <div className="detail-group">
               <div className="detail-header">
-                <span>
-                  <span className="icon fas fa-book-reader" />
-                </span>
                 <span>Soft Skills</span>
               </div>
               {softSkillsJSX}
             </div>
             <div className="detail-group">
               <div className="detail-header">
-                <span>
-                  <span className="icon fas fa-comment-dots" />
-                </span>
                 <span>Languages</span>
               </div>
               {languagesJSX}
@@ -412,9 +396,6 @@ class App extends React.Component {
 
           <div className="detail-group">
             <div className="detail-header">
-              <span>
-                <span className="icon fas fa-briefcase" />
-              </span>
               <span>Work History</span>
             </div>
             {worksJSX}
@@ -422,9 +403,6 @@ class App extends React.Component {
 
           <div className="detail-group">
             <div className="detail-header">
-              <span>
-                <span className="icon fas fa-award" />
-              </span>
               <span>Certifications</span>
             </div>
             {certificatesJSX}
