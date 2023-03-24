@@ -1,40 +1,42 @@
 {
-  "name": "resume",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "3.2.0"
-  },
+  "name": "Akintomiwa Fisayo Resume",
+  "version": "1.0.0",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "next -p 3001",
+    "build": "next build",
+    "start": "next start"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "@zeit/next-less": "^1.0.1",
+    "@zeit/next-sass": "^1.0.1",
+    "antd-mobile": "^2.3.4",
+    "axios": "^1.2.2",
+    "bootstrap": "^5.2.2",
+    "country-state-city": "^3.1.2",
+    "draft-js": "^0.11.7",
+    "draftjs-to-html": "^0.9.1",
+    "jquery": "^3.6.0",
+    "mime-types": "^2.1.35",
+    "moment": "^2.27.0",
+    "next": "^10.2.3",
+    "next-redux-wrapper": "^6.0.2",
+    "prop-types": "^15.8.1",
+    "react": "^16.12.0",
+    "react-bootstrap": "^2.5.0",
+    "react-dom": "^16.12.0",
+    "react-draft-wysiwyg": "^1.15.0",
+    "socket.io-client": "^3.1.2",
+    "webpack": "^4.43.0"
   },
   "devDependencies": {
-    "eslint": "^6.6.0",
-    "eslint-config-airbnb": "^18.0.1",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.16.0",
-    "eslint-plugin-react-hooks": "^1.7.0"
+    "eslint": "^8.19.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.0",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "less": "^2.7.3",
+    "less-loader": "^6.1.1"
   }
 }
