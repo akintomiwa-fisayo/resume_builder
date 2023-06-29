@@ -74,6 +74,10 @@ class Home extends React.Component {
           title: 'Go',
           rate: 5,
         },
+        {
+          title: 'Figma',
+          rate: 5,
+        },
       ],
       softSkills: [
         'Good communication skills.',
