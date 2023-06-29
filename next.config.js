@@ -20,6 +20,7 @@ module.exports = withCss(
         return config;
       },
       resolve: {
+        reactStrictMode: true,
         // extensions: ['.ts', '.tsx', '.js'],
         basePath: '/github-pages',
       },
