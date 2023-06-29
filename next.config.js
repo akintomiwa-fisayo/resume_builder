@@ -20,7 +20,7 @@ module.exports = withCss(
         return config;
       },
       resolve: {
-        extensions: ['.ts', '.tsx', '.js'],
+        // extensions: ['.ts', '.tsx', '.js'],
         basePath: '/github-pages',
       },
     }),
