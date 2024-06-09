@@ -1,0 +1,45 @@
+@import url("https://api.fontshare.com/v2/css?f[]=switzer@600,800,900,100,700,400,200,300,500,1&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {}
+
+/* body {
+  background-color: black;
+} */
+
+@layer utilities {
+  .btn-primary {
+    @apply bg-[#016539] duration-[300ms] ease-in-out py-[10px] px-[20px] text-center cursor-pointer outline-none text-white text-[16px] font-[500] leading-[24px] rounded-[8px] sm:w-full;
+  }
+
+  .btn-secondary {
+    @apply bg-[#FFFFFF] border-[1px] border-[#016539] duration-[300ms] ease-in-out py-[10px] px-[20px] text-center cursor-pointer outline-none text-[#016539] text-[14px] font-[500] leading-[20px] rounded-[8px] sm:w-full;
+  }
+
+  .container {
+    @apply lg:px-6 xl:px-12 w-full px-28 mx-auto max-w-[1980px] h-full;
+  }
+
+  .max-content {
+    @apply max-w-[1350px] mx-auto h-full w-full;
+  }
+}
+
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 30px;
+  unicode-bidi: isolate;
+}
+
+a:-webkit-any-link {
+  color: -webkit-link;
+  cursor: pointer;
+  text-decoration: underline;
+}
