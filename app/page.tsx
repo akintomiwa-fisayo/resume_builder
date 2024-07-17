@@ -74,7 +74,7 @@ export default function Index() {
         from: "Oct 2023",
         to: "Present",
         contributions: [
-          "Led the development of the admin panel for a platform that offers a fast and reliable payment experience for merchants and customers using Tap & Pay cards and terminals. Successfully delivered both version 1 and version 2 on time, ensuring the platform's functionality and meeting critical release deadlines.",
+          "Led the development of the admin panel for a platform that offers a fast and reliable payment experience for merchants and customers using Tap & Pay cards and terminals. Successfully delivered both version 1 and version 2 on time while meeting critical release deadlines.",
           "Revamped the codebase by introducing shared components and enforcing the use of TypeScript accross the codebase. This made the system more stable and easier to maintain, and it also helped reduce code complexity and cut down on bugs.",
           "Mentored junior engineers, providing guidance on best practices, code reviews, and career development.",
         ],
@@ -86,7 +86,7 @@ export default function Index() {
         from: "Jun 2020",
         to: "Oct 2023",
         contributions: [
-          "Led the development of a web app that aim to disrupt the child care industry in the US by allowing users the manage our their children activities and care needs from sitting to tutorinal, homework help and car pooling.",
+          "Led the development of a web app that aim to disrupt the child care industry in the U.S. by allowing users the manage our their children activities and care needs from Sitting to Tutoring, Homework help and Carpooling.",
           "I supported the team with code reviews and debugging, offering feedback and guidance on best practices.",
           "Collaborated closely with UX designers to build intuitive and responsive UI with a focus on accessibility.",
         ],
