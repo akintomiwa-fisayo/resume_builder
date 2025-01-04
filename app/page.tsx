@@ -9,7 +9,8 @@ export default function Index() {
     phoneNumber: ["+2349067677842", "+2349063999113"],
     github: "https://github.com/akintomiwa-fisayo",
     about: `Solution-driven software engineer over 6 years experience excelling in highly collaborative work environment, finding solutions to
-    challenges while being focused on scalability, security, reponsiveness and client's satisfaction.`,
+    challenges while being focused on performance, scalability, security, reponsiveness and client's satisfaction.
+    `,
     skills: [
       {
         title: "HTML5",
@@ -67,6 +68,33 @@ export default function Index() {
       "Ability to work with distributed teams.",
     ],
     works: [
+      {
+        position: "Personal Projects",
+        organization: "",
+        location: "",
+        from: "",
+        to: "",
+        contributions: [
+          <p>
+            <a href="https://www.npmjs.com/package/openapi-sync">
+              openapi-sync (NPM Package)
+            </a>
+            : A developer-friendly tool designed to help keep your API
+            integrations up-to-date by leveraging OpenAPI schemas. It automates
+            the generation of endpoint URIs and type definitions directly from
+            your OpenAPI specification.
+          </p>,
+          <p>
+            <a href="https://marketplace.visualstudio.com/items?itemName=P-Technologies.icon-classes">
+              Icon-Classes (VS Code Extension)
+            </a>
+            : An extension designed to enhances development experience by
+            providing Visual Studio Code users with advanced features such as
+            icons and images preview (on hover), icon classes intelliSense and
+            syntax highlight.
+          </p>,
+        ],
+      },
       {
         position: "Senior Software Engineer",
         organization: "Prunedge",
@@ -282,11 +310,11 @@ export default function Index() {
       <div className="">
         <div className="font-medium">{work.position}</div>
         <div className="font-medium">
-          {work.organization}, {work.location}
+          {work.organization}
+          {work.location && ", "} {work.location}
         </div>
         <div className="italic">
-          {`${work.from} - `}
-          {work.to}
+          {`${work.from} ${work.to ? `- ${work.to}` : ""}`}
         </div>
         <ul className="mt-2 mb-0">
           {work.contributions.map((contribution, i) => (
