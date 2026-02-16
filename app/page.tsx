@@ -75,7 +75,7 @@ export default function Index() {
         from: "",
         to: "",
         contributions: [
-          <p>
+          <p key={0}>
             <a href="https://www.npmjs.com/package/openapi-sync">
               openapi-sync (NPM Package)
             </a>
@@ -84,7 +84,7 @@ export default function Index() {
             the generation of endpoint URIs and type definitions directly from
             your OpenAPI specification.
           </p>,
-          <p>
+          <p key={1}>
             <a href="https://marketplace.visualstudio.com/items?itemName=P-Technologies.icon-classes">
               Icon-Classes (VS Code Extension)
             </a>
@@ -92,6 +92,16 @@ export default function Index() {
             providing Visual Studio Code users with advanced features such as
             icons and images preview (on hover), icon classes intelliSense and
             syntax highlight.
+          </p>,
+          <p key={2}>
+            <a href="https://www.npmjs.com/package/route-sage">
+              Route-sage (NPM Package)
+            </a>
+            : Route Sage is a lightweight TypeScript utility for managing
+            application routes with full type safety. It helps you define and
+            organize your application's URL structure in a maintainable and
+            type-safe way, eliminating common routing errors and improving
+            developer experience.
           </p>,
         ],
       },
