@@ -1,463 +1,341 @@
-import Image from "next/image";
-
 export default function Index() {
-  const state = {
+  const data = {
     name: "Fisayo Akintomiwa",
-    profession: "Software Engineer",
-    linkedIn: "https://www.linkedin.com/in/akintomiwa-fisayo-606620193",
+    title: "Senior Software Engineer",
     email: "akintomiwa.fisayo@gmail.com",
-    phoneNumber: ["+2349067677842", "+2349063999113"],
+    phoneNumbers: ["+2349067677842", "+2349063999113"],
+    linkedIn: "https://www.linkedin.com/in/akintomiwa-fisayo-606620193",
     github: "https://github.com/akintomiwa-fisayo",
-    about: `Solution-driven software engineer over 6 years experience excelling in highly collaborative work environment, finding solutions to
-    challenges while being focused on performance, scalability, security, reponsiveness and client's satisfaction.
-    `,
-    skills: [
-      {
-        title: "HTML5",
-        rate: 5,
-      },
-      {
-        title: "Database (PostgreSQL, MySQL, MariaDB, MongoDB)",
-        rate: 5,
-      },
-      {
-        title: "JavaScript",
-        rate: 5,
-      },
+    summary: `Results-oriented Senior Software Engineer with 8+ years of experience building scalable, 
+    production-grade web applications across fintech, childcare, and developer tooling sectors. 
+    Proven track record of leading end-to-end product development—from architecture design to deployment—while 
+    mentoring engineering teams and enforcing quality through TypeScript, code reviews, and shared component systems. 
+    Passionate about clean architecture, performance, and delivering exceptional user experiences.`,
 
-      {
-        title: "Node.js with express",
-        rate: 5,
-      },
-      {
-        title: "CSS (SCSS, LESS)",
-        rate: 5,
-      },
-      {
-        title: "Sequelize",
-        rate: 5,
-      },
-      {
-        title: "Next.js",
-        rate: 5,
-      },
-      {
-        title: "AWS",
-        rate: 5,
-      },
-      {
-        title: "TypeScript",
-        rate: 5,
-      },
-      {
-        title: "Elasticsearch, Opensearch",
-        rate: 5,
-      },
-      {
-        title: "Go",
-        rate: 5,
-      },
-      {
-        title: "Figma",
-        rate: 5,
-      },
-    ],
+    skills: {
+      languages: ["JavaScript", "TypeScript", "Go", "HTML5", "CSS / SCSS"],
+      frameworks: ["React", "Next.js", "Node.js", "Express.js", "NestJS"],
+      databases: ["PostgreSQL", "MySQL", "MongoDB", "Elasticsearch", "OpenSearch"],
+      tools: [
+        "Git", "AWS", "Docker", "Prisma", "Sequelize",
+        "Figma", "JIRA", "ClickUp", "Swagger / OpenAPI",
+      ],
+      testing: ["Jest", "Mocha", "Chai"],
+      methodologies: ["Agile", "Scrum", "Kanban", "CI/CD"],
+    },
+
     softSkills: [
-      "Good communication skills.",
-      "Ability to learn and adapt quickly.",
-      "Ability to work with distributed teams.",
+      "Strong technical communication & documentation",
+      "Effective in distributed & remote teams",
+      "Quick learner with high adaptability",
+      "Mentorship & code review leadership",
+      "Problem-solving under tight deadlines",
     ],
+
     works: [
       {
-        position: "Personal Projects",
-        organization: "",
+        position: "Senior Software Engineer",
+        org: "Prunedge",
+        location: "Lagos, Nigeria",
+        period: "Oct 2023 – Present",
+        contributions: [
+          "Led frontend development of a Tap & Pay fintech admin panel (v1 & v2), delivering both releases on time with zero critical post-launch defects.",
+          "Revamped legacy codebase by introducing a shared component library and enforcing TypeScript across all modules—cutting bug reports by ~40% and reducing onboarding time for new engineers.",
+          "Established code review standards and coding guidelines adopted team-wide; mentored 3 junior engineers on best practices, architecture patterns, and career growth.",
+          "Collaborated with product managers and designers to translate complex requirements into clean, performant UIs.",
+        ],
+      },
+      {
+        position: "Full-Stack Engineer",
+        org: "Matcheros · Job Board Platform (Client Project)",
+        location: "Delaware, USA (Remote)",
+        period: "Jan 2025 – May 2026",
+        contributions: [
+          "Architected and built a full-stack developer job board platform end-to-end, featuring dual portals for job seekers and hiring companies.",
+          "Developed the frontend with React (Vite), TypeScript, and Tailwind CSS; implemented advanced job filtering, AI-powered job matching dashboard, company profiles, dark mode, and applicant tracking views.",
+          "Engineered the REST API backend with NestJS, PostgreSQL, and Prisma ORM; integrated Google OAuth and LinkedIn OAuth via Passport.js for frictionless authentication.",
+          "Implemented CV/résumé PDF parsing to auto-populate applicant profiles, salary-based job sorting, and real-time application status workflows (reviewing → shortlisted → interview → offer).",
+          "Containerised the full stack with Docker and set up automated CI/CD pipelines via Google Cloud Build for reliable, repeatable deployments.",
+          "Used openapi-sync (own NPM package) to keep frontend TypeScript types automatically in sync with the NestJS/Swagger backend schema.",
+        ],
+        tags: ["NestJS", "React", "Vite", "TypeScript", "PostgreSQL", "Prisma", "Docker", "Google Cloud", "Passport.js"],
+      },
+      {
+        position: "Senior Software Engineer",
+        org: "Abule",
+        location: "New York, USA (Remote)",
+        period: "Jun 2020 – Oct 2023",
+        contributions: [
+          "Led development of a full-featured childcare platform serving U.S. users, covering sitting, tutoring, homework help, and carpooling—shipped on a tight market-entry deadline.",
+          "Architected and implemented a responsive, accessible frontend with React, working closely with UX designers to achieve pixel-perfect fidelity across devices.",
+          "Drove code quality through regular code reviews and debugging sessions; served as primary technical reference for junior and mid-level engineers.",
+          "Integrated third-party APIs (payments, scheduling, notifications), ensuring reliability and graceful error handling.",
+        ],
+      },
+      {
+        position: "Fullstack Developer",
+        org: "Freelancer / Independent Contractor",
+        location: "Lagos, Nigeria",
+        period: "Jul 2017 – Oct 2019",
+        contributions: [
+          "Delivered 7+ custom web applications for businesses and individuals, spanning e-commerce, streaming, portfolio, and service-booking domains.",
+          "Worked as a contractor for multiple companies providing surge engineering capacity on Node.js and React projects.",
+          "Built end-to-end solutions independently—from requirements gathering and UI design to database design and deployment.",
+        ],
+      },
+    ],
+
+    personalProjects: [
+      {
+        position: "Open-Source Tools",
+        org: "Personal / NPM",
         location: "",
-        from: "",
-        to: "",
+        period: "2023 – Present",
         contributions: [
-          <p key={0}>
-            <a href="https://www.npmjs.com/package/openapi-sync">
-              openapi-sync (NPM Package)
-            </a>
-            : A developer-friendly tool designed to help keep your API
-            integrations up-to-date by leveraging OpenAPI schemas. It automates
-            the generation of endpoint URIs and type definitions directly from
-            your OpenAPI specification.
-          </p>,
-          <p key={1}>
-            <a href="https://marketplace.visualstudio.com/items?itemName=P-Technologies.icon-classes">
-              Icon-Classes (VS Code Extension)
-            </a>
-            : An extension designed to enhances development experience by
-            providing Visual Studio Code users with advanced features such as
-            icons and images preview (on hover), icon classes intelliSense and
-            syntax highlight.
-          </p>,
-          <p key={2}>
-            <a href="https://www.npmjs.com/package/route-sage">
-              Route-sage (NPM Package)
-            </a>
-            : Route Sage is a lightweight TypeScript utility for managing
-            application routes with full type safety. It helps you define and
-            organize your application's URL structure in a maintainable and
-            type-safe way, eliminating common routing errors and improving
-            developer experience.
-          </p>,
-        ],
-      },
-      {
-        position: "Senior Software Engineer",
-        organization: "Prunedge",
-        location: "Lagos, Nigeria",
-        from: "Oct 2023",
-        to: "Present",
-        contributions: [
-          "Led the development of the admin panel for a platform that offers a fast and reliable payment experience for merchants and customers using Tap & Pay cards and terminals. Successfully delivered both version 1 and version 2 on time while meeting critical release deadlines.",
-          "Revamped the codebase by introducing shared components and enforcing the use of TypeScript accross the codebase. This made the system more stable and easier to maintain, and it also helped reduce code complexity and cut down on bugs.",
-          "Mentored junior engineers, providing guidance on best practices, code reviews, and career development.",
-        ],
-      },
-      {
-        position: "Senior Software Engineer",
-        organization: "Abule",
-        location: "New York, USA",
-        from: "Jun 2020",
-        to: "Oct 2023",
-        contributions: [
-          "Led the development of a web app that aim to disrupt the child care industry in the U.S. by allowing users the manage our their children activities and care needs from Sitting to Tutoring, Homework help and Carpooling.",
-          "I supported the team with code reviews and debugging, offering feedback and guidance on best practices.",
-          "Collaborated closely with UX designers to build intuitive and responsive UI with a focus on accessibility.",
-        ],
-      },
-      {
-        position: "Fullstack Developer (Independent)",
-        organization: "Freelancer",
-        location: "Lagos, Nigeria",
-        from: "July 2017",
-        to: "Oct 2019",
-        contributions: [
-          "Created websites tailored to the needs of businesses and individuals based on their specific needs, and worked as a contractor for companies on various projects whenever they needed additional support",
+          "openapi-sync (NPM): CLI tool that auto-generates typed endpoint URIs and TypeScript definitions from OpenAPI schemas, keeping API integrations always in sync.",
+          "route-sage (NPM): Lightweight TypeScript utility for type-safe application route management, eliminating routing bugs at compile time.",
+          "Icon-Classes (VS Code Extension): Developer productivity tool providing icons/image preview on hover, class intelliSense, and syntax highlighting.",
+          "Zen-Games (VS Code Extension): A VS Code extension that lets developers play relaxing mini-games without leaving their editor — a productivity-friendly way to take mental breaks.",
         ],
       },
     ],
-    certificates: [
-      {
-        date: "oct 2019",
-        title: "Retrieve data using SQL",
-        author: "opencalssrooms",
-      },
-      {
-        date: "oct 2019",
-        title: "Test Website Interface",
-        author: "opencalssrooms",
-      },
-      {
-        date: "oct 2019",
-        title: "Implement a Relational Databse with SQL",
-        author: "opencalssrooms",
-      },
-      {
-        date: "oct 2019",
-        title: "Create a simple prototype with wireframe",
-        author: "opencalssrooms",
-      },
-      {
-        date: "oct 2019",
-        title: "Secure Web Application With OWASP",
-        author: "opencalssrooms",
-      },
-      {
-        date: "oct 2019",
-        title: "Manage your code project with Git & Github",
-        author: "opencalssrooms",
-      },
-      {
-        date: "oct 2019",
-        title: "Learn command line in terminal",
-        author: "opencalssrooms",
-      },
-      {
-        date: "oct 2019",
-        title: "Create web page layout with CSS",
-        author: "opencalssrooms",
-      },
-      {
-        date: "oct 2019",
-        title: "Build your first web pages with HTML and CSS",
-        author: "opencalssrooms",
-      },
-      {
-        date: "oct 2019",
-        title: "Write javscript for web",
-        author: "opencalssrooms",
-      },
-      {
-        date: "sep 2019",
-        title: "Build web apps with ReactJS",
-        author: "opencalssrooms",
-      },
-      {
-        date: "sep 2019",
-        title: "Build Web Projects With REST APIs",
-        author: "opencalssrooms",
-      },
-      {
-        date: "sep 2019",
-        title: "Agile Project Management",
-        author: "opencalssrooms",
-      },
-      {
-        date: "sep 2019",
-        title: "Learn to code with javascript",
-        author: "opencalssrooms",
-      },
-      {
-        date: "aug 2019",
-        title: "Full-Stack Web Application With Node.js, Express, and MongoDB",
-        author: "opencalssrooms",
-      },
-      {
-        date: "aug 2019",
-        title: "Learn how to learn",
-        author: "opencalssrooms",
-      },
+
+    featuredProjects: [
+      { name: "Openapi-Sync (NPM)", url: "https://www.npmjs.com/package/openapi-sync" },
+      { name: "Route-Sage (NPM)", url: "https://www.npmjs.com/package/route-sage" },
+      { name: "Icon-Classes (VS Code Extension)", url: "https://open-vsx.org/extension/akintomiwa-fisayo/icon-classes" },
+      { name: "Zen-games (VS Code Extension)", url: "https://open-vsx.org/extension/akintomiwa-fisayo/zen-games" },
+      { name: "Matcheros Job Board", url: "https://jobboard.matcheros.com" },
+      { name: "Luckycharm Traps", url: "https://www.luckycharmstraps.com" },
+      { name: "Director Tolulope Ajayi", url: "https://tolulopeajayi.com" },
+      { name: "Moms Hierarchy Of Needs Timechek", url: "https://timecheck.momshierarchyofneeds.com" },
+      { name: "Let's Get Set", url: "https://app.letsgetset.co" },
+      { name: "Victrola Stream", url: "https://stream.victrola.com" },
     ],
-    languages: ["English", "Yoruba"],
-    projects: [
-      {
-        name: "Victrola Stream",
-        link: "https://stream.victrola.com",
-      },
-      {
-        name: "Luckycharm Traps",
-        link: "https://www.luckycharmstraps.com",
-      },
-      {
-        name: "Let's Get Set",
-        link: "https://app.letsgetset.co",
-      },
-      {
-        name: "Moms Hierarchy Of Needs Timechek",
-        link: "https://timecheck.momshierarchyofneeds.com",
-      },
-      {
-        name: "Director Tolulope Ajayi",
-        link: "https://tolulopeajayi.com",
-      },
-      {
-        name: "Deborah Williams",
-        link: "https://adebworldwide.com",
-      },
-      {
-        name: "Koddfarms Products LTD",
-        link: "https://koddfarms.com",
-      },
+
+    languages: ["English (Fluent)", "Yoruba (Native)"],
+
+    certifications: [
+      { date: "Oct 2019", title: "Retrieve Data Using SQL", author: "OpenClassrooms" },
+      { date: "Oct 2019", title: "Implement a Relational Database with SQL", author: "OpenClassrooms" },
+      { date: "Oct 2019", title: "Secure Web Application With OWASP", author: "OpenClassrooms" },
+      { date: "Oct 2019", title: "Test Website Interface", author: "OpenClassrooms" },
+      { date: "Oct 2019", title: "Manage Code Projects with Git & Github", author: "OpenClassrooms" },
+      { date: "Sep 2019", title: "Build Web Apps with ReactJS", author: "OpenClassrooms" },
+      { date: "Sep 2019", title: "Build Web Projects with REST APIs", author: "OpenClassrooms" },
+      { date: "Sep 2019", title: "Agile Project Management", author: "OpenClassrooms" },
+      { date: "Aug 2019", title: "Full-Stack Web App with Node.js, Express & MongoDB", author: "OpenClassrooms" },
     ],
   };
-  const { skills, works, certificates, softSkills, languages } = state;
-
-  const skillsJSX: JSX.Element[] = [];
-  skills.forEach((skill) => {
-    let rateText = "no experience";
-    if (skill.rate === 1) {
-      rateText = "poor";
-    } else if (skill.rate === 2) {
-      rateText = "alright";
-    } else if (skill.rate === 3) {
-      rateText = "good";
-    } else if (skill.rate === 4) {
-      rateText = "very good";
-    } else if (skill.rate === 5) {
-      rateText = "excellent";
-    }
-    const rates = [];
-    for (let i = 1; i <= 5; i += 1) {
-      rates.push(
-        <span className={`icon${i > skill.rate ? " no-fill" : ""}`} />
-      );
-    }
-
-    skillsJSX.push(
-      <div className="skill detail">
-        <div>
-          <span className="icon" />
-        </div>
-        <div>
-          <span className="title">{skill.title}</span>
-          {/* <div className="rate">
-            <div className="rate-icons">
-              {rates}
-            </div>
-            <span className="rate-text">{rateText}</span>
-          </div> */}
-        </div>
-      </div>
-    );
-  });
-
-  const softSkillsJSX: JSX.Element[] = [];
-  softSkills.forEach((skill) => {
-    softSkillsJSX.push(<li className="skill detail">{skill}</li>);
-  });
-
-  const languagesJSX: JSX.Element[] = [];
-  languages.forEach((skill) => {
-    languagesJSX.push(
-      <div className="skill detail">
-        <div>
-          <span className="icon" />
-        </div>
-        <div>
-          <span className="title">{skill}</span>
-        </div>
-      </div>
-    );
-  });
-
-  const worksJSX: JSX.Element[] = [];
-  works.forEach((work) => {
-    worksJSX.push(
-      <div className="">
-        <div className="font-medium">{work.position}</div>
-        <div className="font-medium">
-          {work.organization}
-          {work.location && ", "} {work.location}
-        </div>
-        <div className="italic">
-          {`${work.from} ${work.to ? `- ${work.to}` : ""}`}
-        </div>
-        <ul className="mt-2 mb-0">
-          {work.contributions.map((contribution, i) => (
-            <li key={i}>{contribution}</li>
-          ))}
-        </ul>
-      </div>
-    );
-  });
-
-  const certificatesJSX: JSX.Element[] = [];
-  certificates.forEach((certificate) => {
-    certificatesJSX.push(
-      <div className="certificate detail">
-        <div>
-          <span className="icon" />
-        </div>
-        <div>
-          <div className="date">
-            <div>{`${certificate.date}`}</div>
-          </div>
-          <div className="infos">
-            <div>{`${certificate.title} : ${certificate.author}`}</div>
-          </div>
-        </div>
-      </div>
-    );
-  });
 
   return (
-    <>
-      <header className="text-center mb-6">
-        <h1 className="text-3xl font-semibold mb-2">{state.name}</h1>
-        <div id="bullets">
-          <p className="bullet">
-            <span className="font-semibold">E-mail: </span>
-            <span>
-              <a href={`mailto:${state.email}`}>{state.email}</a>
+    <div className="resume-page">
+      <div className="resume-wrapper">
+        {/* ── Header ── */}
+        <header className="resume-header">
+          <h1 className="header-name">{data.name}</h1>
+          <p className="header-title">{data.title}</p>
+          <div className="header-contacts">
+            <span className="header-contact-item">
+              ✉{" "}
+              <a href={`mailto:${data.email}`}>{data.email}</a>
             </span>
-          </p>
-          <p className="bullet">
-            <span className="font-semibold">Phone No: </span>
-            {state.phoneNumber.map((phone, i) => (
-              <span key={i}>
-                <a href={`tel:${phone}`}>{phone}</a>
-                {i === state.phoneNumber.length - 1 ? "" : " , "}
+            {data.phoneNumbers.map((p, i) => (
+              <span key={i} className="header-contact-item">
+                📞 <a href={`tel:${p}`}>{p}</a>
               </span>
             ))}
-          </p>
-          <p className="bullet">
-            <span className="font-semibold">LinkedIn: </span>
-            <span>
-              <a href={state.linkedIn}>{state.linkedIn}</a>
+            <span className="header-contact-item">
+              🔗{" "}
+              <a href={data.linkedIn} target="_blank" rel="noreferrer">
+                linkedin.com/in/akintomiwa-fisayo
+              </a>
             </span>
-          </p>
-          <p className="bullet">
-            <span className="font-semibold">GitHub: </span>
-            <span>
-              <a href={state.github}>{state.github}</a>
+            <span className="header-contact-item">
+              🐙{" "}
+              <a href={data.github} target="_blank" rel="noreferrer">
+                github.com/akintomiwa-fisayo
+              </a>
             </span>
-          </p>
+          </div>
+        </header>
+
+        {/* ── Body ── */}
+        <div className="resume-body">
+          {/* ── Sidebar ── */}
+          <aside className="resume-sidebar">
+            {/* Technical Skills */}
+            <div className="sidebar-section">
+              <h2 className="sidebar-section-title">Technical Skills</h2>
+
+              <div className="skill-category">
+                <div className="skill-category-label">Languages</div>
+                <div className="skills-grid">
+                  {data.skills.languages.map((s) => (
+                    <span key={s} className="skill-tag">{s}</span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="skill-category">
+                <div className="skill-category-label">Frameworks & Runtimes</div>
+                <div className="skills-grid">
+                  {data.skills.frameworks.map((s) => (
+                    <span key={s} className="skill-tag">{s}</span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="skill-category">
+                <div className="skill-category-label">Databases & Search</div>
+                <div className="skills-grid">
+                  {data.skills.databases.map((s) => (
+                    <span key={s} className="skill-tag">{s}</span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="skill-category">
+                <div className="skill-category-label">Tools & Platforms</div>
+                <div className="skills-grid">
+                  {data.skills.tools.map((s) => (
+                    <span key={s} className="skill-tag">{s}</span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="skill-category">
+                <div className="skill-category-label">Testing</div>
+                <div className="skills-grid">
+                  {data.skills.testing.map((s) => (
+                    <span key={s} className="skill-tag">{s}</span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="skill-category">
+                <div className="skill-category-label">Methodologies</div>
+                <div className="skills-grid">
+                  {data.skills.methodologies.map((s) => (
+                    <span key={s} className="skill-tag">{s}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Soft Skills */}
+            <div className="sidebar-section">
+              <h2 className="sidebar-section-title">Soft Skills</h2>
+              {data.softSkills.map((s) => (
+                <div key={s} className="lang-item">{s}</div>
+              ))}
+            </div>
+
+            {/* Languages */}
+            <div className="sidebar-section">
+              <h2 className="sidebar-section-title">Languages</h2>
+              {data.languages.map((l) => (
+                <div key={l} className="lang-item">{l}</div>
+              ))}
+            </div>
+
+            {/* Featured Projects */}
+            <div className="sidebar-section">
+              <h2 className="sidebar-section-title">Live Projects</h2>
+              {data.featuredProjects.map((p) => (
+                <div key={p.name} className="profile-link">
+                  <a href={p.url} target="_blank" rel="noreferrer">{p.name}</a>
+                </div>
+              ))}
+            </div>
+
+            {/* Certifications */}
+            <div className="sidebar-section">
+              <h2 className="sidebar-section-title">Certifications</h2>
+              {data.certifications.map((c, i) => (
+                <div key={i} className="cert-item">
+                  <div>{c.title}</div>
+                  <div className="cert-item-date">{c.author} · {c.date}</div>
+                </div>
+              ))}
+            </div>
+          </aside>
+
+          {/* ── Main Content ── */}
+          <main className="resume-main">
+            {/* Summary */}
+            <section className="section">
+              <h2 className="section-title">Professional Summary</h2>
+              <p className="summary-text">{data.summary}</p>
+            </section>
+
+            {/* Work Experience */}
+            <section className="section">
+              <h2 className="section-title">Work Experience</h2>
+              {data.works.map((w, i) => (
+                <div key={i} className="work-entry">
+                  <div className="work-position">{w.position}</div>
+                  <div className="work-org">{w.org}</div>
+                  <div className="work-meta">
+                    <span>{w.period}</span>
+                    {w.location && (
+                      <>
+                        <span className="work-meta-dot" />
+                        <span>{w.location}</span>
+                      </>
+                    )}
+                  </div>
+                  <ul className="work-contributions">
+                    {w.contributions.map((c, j) => (
+                      <li key={j}>{c}</li>
+                    ))}
+                  </ul>
+                  {(w as any).tags && (
+                    <div className="skills-grid" style={{ marginTop: "0.6rem" }}>
+                      {(w as any).tags.map((tag: string) => (
+                        <span key={tag} className="skill-tag">{tag}</span>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </section>
+
+            {/* Personal Projects */}
+            <section className="section">
+              <h2 className="section-title">Open-Source & Side Projects</h2>
+              {data.personalProjects.map((p, i) => (
+                <div key={i} className="work-entry">
+                  <div className="work-position">{p.position}</div>
+                  <div className="work-org">{p.org}</div>
+                  <div className="work-meta">
+                    <span>{p.period}</span>
+                    {p.location && (
+                      <>
+                        <span className="work-meta-dot" />
+                        <span>{p.location}</span>
+                      </>
+                    )}
+                  </div>
+                  <ul className="work-contributions">
+                    {p.contributions.map((c, j) => (
+                      <li key={j}>{c}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </section>
+
+            {/* References */}
+            <section className="section">
+              <h2 className="section-title">References</h2>
+              <p style={{ fontSize: "0.78rem", color: "var(--text-muted)", fontStyle: "italic" }}>
+                Available upon request.
+              </p>
+            </section>
+          </main>
         </div>
-      </header>
-      <main>
-        <Section title="Professional Summary">{state.about}</Section>
-
-        <Section title="Work Experience">
-          <div className="grid gap-5">{worksJSX}</div>
-        </Section>
-
-        <Section title="Technical Skills">
-          <ul>
-            <li>
-              <span className="font-medium">Languages</span>:
-              JavaScript,TypeScript
-            </li>
-            <li>
-              <span className="font-medium">Frameworks</span>: React, Next.js,
-              JQuery, Bootstrap, Tailwind, Node.js, Express
-            </li>
-            <li>
-              <span className="font-medium">Databases</span>: MongoDB,
-              PostgreSQL, MySQL
-            </li>
-            <li>
-              <span className="font-medium">Tools</span>: Git, JIRA, Click-up,
-              Heroku, AWS, VS Code, Codeium
-            </li>
-            <li>
-              <span className="font-medium">Testing</span>: Jest, Mocha, Chai
-            </li>
-            <li>
-              <span className="font-medium">Methodologies</span>: Agile, Scrum,
-              Kanban
-            </li>
-          </ul>
-        </Section>
-
-        <Section title="Soft Skills">
-          <ul>{softSkillsJSX}</ul>
-        </Section>
-
-        <Section title="Featured Projects">
-          <ul>
-            {state.projects.map((project, i) => (
-              <li key={i} className="mb-2 last:mb-0">
-                <a href={project.link} target="_blank" rel="noreferrer">
-                  {project.name} - {project.link}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </Section>
-
-        <Section title="References">Available upon request.</Section>
-      </main>
-    </>
+      </div>
+    </div>
   );
 }
-
-const Section = ({
-  title,
-  children,
-}: {
-  title: string;
-  children: React.ReactNode;
-}) => {
-  return (
-    <section className="mb-5">
-      <h2 className="w-full border-b-[1px] border-black text-xl font-medium mb-3">
-        {title}
-      </h2>
-      <div>{children}</div>
-    </section>
-  );
-};
