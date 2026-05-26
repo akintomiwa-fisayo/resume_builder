@@ -49,16 +49,15 @@ export default function Index() {
         position: "Full-Stack Engineer",
         org: "Matcheros · Job Board Platform (Client Project)",
         location: "Delaware, USA (Remote)",
-        period: "Jan 2025 – May 2026",
+        period: "Dec 2025 – May 2026",
         contributions: [
           "Architected and built a full-stack developer job board platform end-to-end, featuring dual portals for job seekers and hiring companies.",
           "Developed the frontend with React (Vite), TypeScript, and Tailwind CSS; implemented advanced job filtering, AI-powered job matching dashboard, company profiles, dark mode, and applicant tracking views.",
           "Engineered the REST API backend with NestJS, PostgreSQL, and Prisma ORM; integrated Google OAuth and LinkedIn OAuth via Passport.js for frictionless authentication.",
           "Implemented CV/résumé PDF parsing to auto-populate applicant profiles, salary-based job sorting, and real-time application status workflows (reviewing → shortlisted → interview → offer).",
-          "Containerised the full stack with Docker and set up automated CI/CD pipelines via Google Cloud Build for reliable, repeatable deployments.",
           "Used openapi-sync (own NPM package) to keep frontend TypeScript types automatically in sync with the NestJS/Swagger backend schema.",
         ],
-        tags: ["NestJS", "React", "Vite", "TypeScript", "PostgreSQL", "Prisma", "Docker", "Google Cloud", "Passport.js"],
+        tags: ["NestJS", "React", "Vite", "TypeScript", "PostgreSQL", "Prisma", "Passport.js"],
       },
       {
         position: "Senior Software Engineer",
