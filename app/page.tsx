@@ -18,7 +18,7 @@ export default function Index() {
       databases: ["PostgreSQL", "MySQL", "MongoDB", "Elasticsearch", "OpenSearch"],
       tools: [
         "Git", "AWS", "Docker", "Prisma", "Sequelize",
-        "Figma", "JIRA", "ClickUp", "Swagger / OpenAPI",
+        "Chrome Extensions (MV3)", "Figma", "JIRA", "ClickUp", "Swagger / OpenAPI",
       ],
       testing: ["Jest", "Mocha", "Chai"],
       methodologies: ["Agile", "Scrum", "Kanban", "CI/CD"],
@@ -86,8 +86,22 @@ export default function Index() {
 
     personalProjects: [
       {
-        position: "Open-Source Tools",
-        org: "Personal / NPM",
+        position: "Creator & Developer",
+        org: "Tab Manager Pro · Chrome Web Store",
+        location: "Chrome Extension (Manifest V3)",
+        period: "2024 – Present",
+        contributions: [
+          "Engineered a privacy-first, high-performance browser extension (Manifest V3) for tab hygiene, workspace session management, and developer productivity.",
+          "Architected full workspace snapshot & session state preservation engine restoring window geometry, tab group hierarchies, and origin-scoped cookies, localStorage, sessionStorage, and IndexedDB.",
+          "Implemented automated background memory hibernation via chrome.alarms and chrome.tabs.discard, duplicate tab detection/merging, and stale tab cleanup (>24h).",
+          "Built surgical origin-level storage/cache purge tools (CacheStorage, Service Workers, Cookies) and global keyboard shortcuts to streamline web developer debugging.",
+          "Created an offscreen document-powered clipboard stack manager and Command Palette (Cmd+K) with keyboard quick-pick and direct webpage text injection.",
+        ],
+        tags: ["Chrome Extension (MV3)", "JavaScript (ES6+)", "Offscreen API", "Service Workers", "HTML5 / CSS3"],
+      },
+      {
+        position: "Open-Source Developer",
+        org: "Personal / NPM & Open VSX Tools",
         location: "",
         period: "2023 – Present",
         contributions: [
@@ -96,10 +110,12 @@ export default function Index() {
           "Icon-Classes (VS Code Extension): Developer productivity tool providing icons/image preview on hover, class intelliSense, and syntax highlighting.",
           "Zen-Games (VS Code Extension): A VS Code extension that lets developers play relaxing mini-games without leaving their editor — a productivity-friendly way to take mental breaks.",
         ],
+        tags: ["TypeScript", "Node.js", "CLI", "VS Code Extension API", "OpenAPI / Swagger"],
       },
     ],
 
     featuredProjects: [
+      { name: "Tab Manager Pro (Chrome Extension)", url: "https://chromewebstore.google.com/detail/tab-manager-pro/nikfajonlnmifdbjmdoglbeddggajgaf" },
       { name: "Openapi-Sync (NPM)", url: "https://www.npmjs.com/package/openapi-sync" },
       { name: "Route-Sage (NPM)", url: "https://www.npmjs.com/package/route-sage" },
       { name: "Icon-Classes (VS Code Extension)", url: "https://open-vsx.org/extension/akintomiwa-fisayo/icon-classes" },
@@ -321,6 +337,13 @@ export default function Index() {
                       <li key={j}>{c}</li>
                     ))}
                   </ul>
+                  {(p as any).tags && (
+                    <div className="skills-grid" style={{ marginTop: "0.6rem" }}>
+                      {(p as any).tags.map((tag: string) => (
+                        <span key={tag} className="skill-tag">{tag}</span>
+                      ))}
+                    </div>
+                  )}
                 </div>
               ))}
             </section>
