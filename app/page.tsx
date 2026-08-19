@@ -89,7 +89,7 @@ export default function Index() {
         position: "Creator & Developer",
         org: "Tab Manager Pro · Chrome Web Store",
         location: "Chrome Extension (Manifest V3)",
-        period: "2024 – Present",
+        period: "2025 – Present",
         contributions: [
           "Engineered a privacy-first, high-performance browser extension (Manifest V3) for tab hygiene, workspace session management, and developer productivity.",
           "Architected full workspace snapshot & session state preservation engine restoring window geometry, tab group hierarchies, and origin-scoped cookies, localStorage, sessionStorage, and IndexedDB.",
