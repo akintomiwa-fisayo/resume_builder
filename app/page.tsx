@@ -86,6 +86,20 @@ export default function Index() {
 
     personalProjects: [
       {
+        position: "Creator & Lead Engineer",
+        org: "RecBug · Chrome Web Store",
+        location: "Chrome Extension (Manifest V3)",
+        period: "2026 – Present",
+        contributions: [
+          "Architected and built RecBug, a high-performance Manifest V3 browser extension and developer QA platform for in-browser screen recording, network telemetry, and 1-click issue reporting.",
+          "Developed non-intrusive MAIN-world telemetry interceptors capturing XHR, Fetch, and WebSocket traffic, console logs, and uncaught exceptions with zero external runtime dependencies.",
+          "Implemented continuous in-browser tab and screen recording via Chrome tabCapture and Offscreen APIs with client-side frame-accurate video trimming and interactive screenshot annotation tools.",
+          "Engineered browser storage snapshot engine exporting origin-scoped cookies, localStorage, IndexedDB, and CacheStorage with automated credential masking and HAR format exports.",
+          "Built multi-destination integration adapters for 1-click issue reporting directly into ClickUp, Jira, Linear, Slack, and Microsoft Teams.",
+        ],
+        tags: ["Chrome Extension (MV3)", "JavaScript (ES6+)", "Offscreen API", "Service Workers", "IndexedDB", "REST APIs"],
+      },
+      {
         position: "Creator & Developer",
         org: "Tab Manager Pro · Chrome Web Store",
         location: "Chrome Extension (Manifest V3)",
@@ -105,6 +119,7 @@ export default function Index() {
         location: "",
         period: "2023 – Present",
         contributions: [
+          "@recbug/browser (NPM): In-browser telemetry capture and bug recording SDK enabling web applications to capture console logs, network events, and user sessions.",
           "openapi-sync (NPM): CLI tool that auto-generates typed endpoint URIs and TypeScript definitions from OpenAPI schemas, keeping API integrations always in sync.",
           "route-sage (NPM): Lightweight TypeScript utility for type-safe application route management, eliminating routing bugs at compile time.",
           "Icon-Classes (VS Code Extension): Developer productivity tool providing icons/image preview on hover, class intelliSense, and syntax highlighting.",
@@ -115,6 +130,8 @@ export default function Index() {
     ],
 
     featuredProjects: [
+      { name: "RecBug (Chrome Extension)", url: "https://chromewebstore.google.com/detail/recbug/elegpfgcbnldiogpidlkkkmbhfodjmgd" },
+      { name: "RecBug Website", url: "https://recbug.com" },
       { name: "Tab Manager Pro (Chrome Extension)", url: "https://chromewebstore.google.com/detail/tab-manager-pro/nikfajonlnmifdbjmdoglbeddggajgaf" },
       { name: "Openapi-Sync (NPM)", url: "https://www.npmjs.com/package/openapi-sync" },
       { name: "Route-Sage (NPM)", url: "https://www.npmjs.com/package/route-sage" },
